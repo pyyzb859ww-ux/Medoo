@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمد إبراهيم | IT Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Cairo,sans-serif}
+body{background:#0b1220;color:#fff;scroll-behavior:smooth}
+nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.4);backdrop-filter:blur(10px);padding:15px 5%;z-index:100}
+nav a{color:#fff;text-decoration:none;margin:0 15px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;background:linear-gradient(135deg,#0f172a,#1d4ed8)}
+.hero img{width:180px;height:180px;border-radius:50%;border:5px solid #fff;object-fit:cover}
+.hero h1{font-size:3rem;margin:20px 0}
+.hero p{max-width:700px;margin:auto}
+.btn{display:inline-block;margin:10px;padding:12px 24px;background:#3b82f6;color:#fff;text-decoration:none;border-radius:8px}
+section{padding:80px 8%}
+.card{background:#111827;padding:25px;border-radius:16px;margin-top:20px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.skill{background:#1f2937;padding:15px;border-radius:10px;text-align:center}
+.timeline{border-right:3px solid #3b82f6;padding-right:20px}
+.item{margin-bottom:30px;position:relative}
+.item:before{content:'';position:absolute;right:-31px;top:5px;width:15px;height:15px;background:#3b82f6;border-radius:50%}
+footer{text-align:center;padding:30px;background:#020617}
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.fade.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#about">نبذة</a>
+<a href="#skills">المهارات</a>
+<a href="#exp">الخبرات</a>
+<a href="#contact">التواصل</a>
+</nav>
+
+<div class="hero">
+<div>
+<img src="https://via.placeholder.com/300" alt="صورة شخصية">
+<h1>محمد إبراهيم</h1>
+<h3>IT Specialist</h3>
+<p>متخصص تقنية معلومات بخبرة 3 سنوات في الدعم الفني وصيانة الأجهزة وإدارة الأنظمة المؤسسية.</p>
+<a class="btn" href="#contact">تواصل معي</a>
+<a class="btn" href="cv.pdf">تحميل السيرة الذاتية</a>
+</div>
+</div>
+
+<section id="about" class="fade">
+<h2>نبذة عني</h2>
+<div class="card">
+حاصل على بكالوريوس نظم ومعلومات وأمتلك خبرة عملية في ServiceDesk Plus (SDP)، SAP، وصيانة الأجهزة والدعم الفني للمستخدمين، مع شغف بتطوير البنية التقنية وتحسين الأداء.
+</div>
+</section>
+
+<section id="skills" class="fade">
+<h2>المهارات</h2>
+<div class="skills">
+<div class="skill">ServiceDesk Plus (SDP)</div>
+<div class="skill">SAP</div>
+<div class="skill">IT Support</div>
+<div class="skill">Hardware Maintenance</div>
+<div class="skill">Troubleshooting</div>
+<div class="skill">Asset Management</div>
+</div>
+</section>
+
+<section id="exp" class="fade">
+<h2>الخبرات</h2>
+<div class="card timeline">
+<div class="item">
+<h3>IT Specialist</h3>
+<p>خبرة 3 سنوات في الدعم الفني وإدارة التذاكر وحل المشكلات التقنية.</p>
+</div>
+<div class="item">
+<h3>SAP Support</h3>
+<p>مساعدة المستخدمين ومعالجة الأعطال المرتبطة بالنظام.</p>
+</div>
+<div class="item">
+<h3>Hardware Maintenance</h3>
+<p>صيانة وتركيب أجهزة الحاسب والطابعات وملحقاتها.</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="fade">
+<h2>التواصل</h2>
+<div class="card">
+<p>📞 01150601650</p>
+<p>📧 mohamedtaha123456789@gmail.com</p>
+</div>
+</section>
+
+<footer>© 2026 محمد إبراهيم - جميع الحقوق محفوظة</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
